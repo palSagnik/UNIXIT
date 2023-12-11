@@ -1,0 +1,105 @@
+services:
+  mysqldb_flag:
+    container_name: mysqldb_flag
+    image: mysql
+    environment:
+        MYSQL_DATABASE: flagsdb
+        MYSQL_USER: cyberlabs
+        MYSQL_PASSWORD: Fl4Gs_F0R_Fr33!!
+        MYSQL_ROOT_PASSWORD: 1gn1s@r_0_0_t
+    volumes:
+            - ./flagdatabase/flag_db:/docker-entrypoint-initdb.d/
+    ports:
+      - 3306:3306
+    healthcheck:
+            test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", '-u', 'root', '-p$$MYSQL_ROOT_PASSWORD']
+            timeout: 20s
+            retries: 10
+
+  level_00:
+    container_name: level_00
+    build:
+      context: level_00
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+        condition: service_healthy
+    ports:
+      - 2023:22
+
+  level_01:
+    container_name: level_01
+    build:
+      context: level_01
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 2024:22
+  
+  level_02:
+    container_name: level_02
+    build:
+      context: level_02
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 2025:22
+  
+  level_03:
+    container_name: level_03
+    build:
+      context: level_03
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 2026:22
+
+  level_04:
+    container_name: level_04
+    build:
+      context: level_04
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 2027:22
+
+  level_05:
+    container_name: level_05
+    build:
+      context: level_05
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 2028:22
+
+  level_06:
+    container_name: level_06
+    build:
+      context: level_06
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 2029:22
+
+  level_07:
+    container_name: level_07
+    build:
+      context: level_07
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 2030:22 

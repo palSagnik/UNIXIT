@@ -1,38 +1,28 @@
-# docker run -d -p 2023:22 --rm level14
-# For debug: docker exec -it <container_id> bash
-FROM alpine:latest
+FROM alpine:3.18
 
 RUN apk update
 RUN apk add openssh
 RUN apk add python3
 RUN apk add py-pip
 RUN pip install mysql-connector-python
+RUN pip install numpy
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
-
-#adding user level14 for the challenge and making their home directory
 RUN ssh-keygen -A
-RUN adduser -h /home/level14 -s /bin/ash -D level14
-RUN echo "level14:9aa42a885703d234c6729d326665e07a" | chpasswd
 
-#level challenge
-RUN mkdir /opt/scripts
-RUN mkdir /opt/scripts/level14
-RUN chmod 700 /opt/scripts/level14
-COPY ./fetch.py /opt/scripts/level14/fetch.py
-COPY ./level14.sh /opt/scripts/level14/level14.sh
-RUN chmod +x /opt/scripts/level14/level14.sh
-RUN /opt/scripts/level14/level14.sh
+#adding user for the challenge and making their home directory
+RUN adduser -h /home/level14 -s /bin/ash -D level14
+RUN echo "level14:085956dfcd6d49d45c1516f7771f4659" | chpasswd
+
+#banner
+COPY ./flag.py /root/flag.py
+COPY ./level14.sh /root/level14.sh
+RUN chmod +x /root/level14.sh
 
 #set user working directory
 WORKDIR /home/level14
 RUN chown root:root -R /home/level14
-RUN chattr +i -R /home/level14
+RUN chmod 744 /home/level14
 
 EXPOSE 22
 
-CMD ["/usr/sbin/sshd","-D"]
-
-
-
-
-
+CMD ["/root/level14.sh"]

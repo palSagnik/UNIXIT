@@ -1,13 +1,13 @@
 #!/usr/bin/env python
-import SocketServer
+import socketserver
 import time
 import threading
 
-class Service(SocketServer.BaseRequestHandler):
+class Service(socketserver.BaseRequestHandler):
     def handle(self) :
         entered=self.receive()
         if(entered=='e280510d058c72638d702ecd8bdd4893'):
-            flag=open('/opt/scripts/level15/flag.txt','r')
+            flag=open('/root/flag.txt','r')
             self.send(flag.read())
         else:
             rickroll='Open the url to get the passowrd : shorturl.at/qGKT0'
@@ -21,12 +21,12 @@ class Service(SocketServer.BaseRequestHandler):
         if newline: string = string + "\n"
         self.request.sendall(string)
 
-class ThreadedService(SocketServer.ThreadingMixIn, SocketServer.TCPServer,SocketServer.DatagramRequestHandler):
+class ThreadedService(socketserver.ThreadingMixIn, socketserver.TCPServer,socketserver.DatagramRequestHandler):
     pass
 
 
 def main():
-    port=4242
+    port=6969
     host='0.0.0.0'
 
     service = Service

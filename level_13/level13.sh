@@ -1,2 +1,2 @@
 #!/bin/ash
-python3 /opt/scripts/level13/fetch.py > /home/level13/flag.txt
+python3 /root/flag.py > /home/level13/flag.txt

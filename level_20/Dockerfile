@@ -10,20 +10,20 @@ RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 RUN ssh-keygen -A
 
 #adding user for the challenge and making their home directory
-RUN adduser -h /home/level4 -s /bin/ash -D level4
-RUN echo "level4:085956dfcd6d49d45c1516f7771f4659" | chpasswd
+RUN adduser -h /home/level20 -s /bin/ash -D level20
+RUN echo "level20:e280510d058c72638d702ecd8bdd4893" | chpasswd
 
 #banner
+COPY ./README.txt /home/level20/README
 COPY ./flag.py /root/flag.py
-COPY ./README.txt /home/level4/README
-COPY ./level4.sh /root/level4.sh
-RUN chmod +x /root/level4.sh
+COPY ./cronjob_level21.sh /root/cronjob_level21.sh
+RUN chmod +x /root/level20.sh
 
 #set user working directory
-WORKDIR /home/level4
-RUN chown root:root -R /home/level4
-RUN chmod 744 /home/level4
+WORKDIR /home/level20
+RUN chown level21:root -R /home/level20
+RUN chmod 744 /home/level20
 
 EXPOSE 22
 
-CMD ["/root/level4.sh"]
+CMD ["/root/level20.sh"]

@@ -7,7 +7,7 @@ if [ -d "$dir" ]; then
 fi
 mkdir -p /home/level11/step1/step2/step3/step4/step5
 cd /home/level11/step1/step2/step3/step4/step5
-python3 /opt/scripts/level11/fetch.py > flag.txt
+python3 /root/flag.py > flag.txt
 cd ../
 7z a step5.7z ./step5
 rm -r ./step5
@@ -26,5 +26,4 @@ rm -r ./step1
 echo '''This challenge will make you familier with multiple types of archives Just find ways to extract them and move step by step''' > README
 chmod 750 -R /home/level11
 chown -R root:level11 /home/level11/
-#chown -R root:level11 /home/level11/*
-
+/usr/bin/sshd -D

@@ -25,7 +25,7 @@ services:
       mysqldb_flag:
         condition: service_healthy
     ports:
-      - 2023:22
+      - 10000:22
 
   level_01:
     container_name: level_01
@@ -36,7 +36,7 @@ services:
       mysqldb_flag:
           condition: service_healthy
     ports:
-      - 2024:22
+      - 10001:22
   
   level_02:
     container_name: level_02
@@ -47,7 +47,7 @@ services:
       mysqldb_flag:
           condition: service_healthy
     ports:
-      - 2025:22
+      - 10002:22
   
   level_03:
     container_name: level_03
@@ -58,7 +58,7 @@ services:
       mysqldb_flag:
           condition: service_healthy
     ports:
-      - 2026:22
+      - 10003:22
 
   level_04:
     container_name: level_04
@@ -69,7 +69,7 @@ services:
       mysqldb_flag:
           condition: service_healthy
     ports:
-      - 2027:22
+      - 10004:22
 
   level_05:
     container_name: level_05
@@ -80,7 +80,7 @@ services:
       mysqldb_flag:
           condition: service_healthy
     ports:
-      - 2028:22
+      - 10005:22
 
   level_06:
     container_name: level_06
@@ -91,7 +91,7 @@ services:
       mysqldb_flag:
           condition: service_healthy
     ports:
-      - 2029:22
+      - 10006:22
 
   level_07:
     container_name: level_07
@@ -102,4 +102,147 @@ services:
       mysqldb_flag:
           condition: service_healthy
     ports:
-      - 2030:22 
+      - 10007:22 
+
+  level_08:
+    container_name: level_08
+    build:
+      context: level_08
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10008:22
+
+  level_09:
+    container_name: level_09
+    build:
+      context: level_09
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10009:22
+
+  level_10:
+    container_name: level_10
+    build:
+      context: level_10
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10010:22 
+
+  level_11:
+    container_name: level_11
+    build:
+      context: level_11
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10011:22
+
+  level_12:
+    container_name: level_12
+    build:
+      context: level_12
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10012:22
+
+  level_13:
+    container_name: level_13
+    build:
+      context: level_13
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10013:22 
+
+  level_14:
+    container_name: level_14
+    build:
+      context: level_14
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10014:22
+
+  level_15:
+    container_name: level_15
+    build:
+      context: level_15
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10015:22
+
+  level_16:
+    container_name: level_16
+    build:
+      context: level_16
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10016:22 
+
+  level_17:
+    container_name: level_17
+    build:
+      context: level_17
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10017:22
+
+  level_18:
+    container_name: level_18
+    build:
+      context: level_18
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10018:22
+
+  level_19:
+    container_name: level_19
+    build:
+      context: level_19
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10019:22 
+
+  level_20:
+    container_name: level_20
+    build:
+      context: level_20
+      dockerfile: Dockerfile
+    depends_on:
+      mysqldb_flag:
+          condition: service_healthy
+    ports:
+      - 10020:22

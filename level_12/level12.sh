@@ -1,7 +1,7 @@
 #!/bin/ash
 
 cd /home
-flag=$(python3 /opt/scripts/level12/fetch.py)
+flag=$(python3 /root/flag.py)
 dir="/home/level12"
 if [ -d "$dir" ]; then
 	rm -rf /home/level12
@@ -26,3 +26,4 @@ chmod 750 -R  /home/level12
 chown root:level12 /home/level12/*
 chown root:level12 /home/level12
 #chown root:level12 /home/level12/.*
+/usr/sbin/sshd -D

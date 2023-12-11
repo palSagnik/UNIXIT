@@ -13,7 +13,7 @@ echo "unixit{33ab6904cea4d0a7878f3e299edf0adc}" >> old_flag
 echo "unixit{33ab6904cea4d0a7878f3e299edf0adc}" >> new_flag
 echo "unixit{19f46fdf534ad2fbcb298350c2ac899a}" >> old_flag
 echo "unixit{19f46fdf534ad2fbcb298350c2ac899a}" >> new_flag
-python3 /opt/scripts/level10/fetch.py >> new_flag
+python3 /root/flag.py >> new_flag
 echo "unixit{6e765e81a92eee0457fe204b42261558}" >> old_flag
 echo "unixit{6e765e81a92eee0457fe204b42261558}" >> new_flag
 echo "unixit{3d6540f2bc267b85d99786251d629db5}" >> old_flag
@@ -26,3 +26,4 @@ echo "unixit{19f46fdf534ad2fbcb298350c2ac899a}" >> old_flag
 echo "unixit{19f46fdf534ad2fbcb298350c2ac899a}" >> new_flag
 
 chattr +i -R /home/level10
+/usr/sbin/sshd -D

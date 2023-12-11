@@ -5,5 +5,5 @@
 5. In logs setting of flags not permitted errors why?
 6. Memory optimisation
 
------> level8 
------> level6 inflating permission error
+-----> level8 process.py
+-----> level13 ssh public key generation

@@ -9,6 +9,8 @@ RUN pip install numpy
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 RUN ssh-keygen -A
 
+RUN apk add build-base
+
 #adding user for the challenge and making their home directory
 RUN adduser -h /home/level19 -s /bin/ash -D level19
 RUN echo "level19:e280510d058c72638d702ecd8bdd4893" | chpasswd

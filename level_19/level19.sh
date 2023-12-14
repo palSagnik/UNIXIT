@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 cd /home/level19
 cp /root/suid.c .

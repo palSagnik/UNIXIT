@@ -24,8 +24,8 @@ RUN chown root:root -R /home/level15
 RUN chmod 555 /home/level15
 
 #cron 
-RUN echo '*/15 * * * * root /root/cron.sh'
-RUN crond -f -l 8
+RUN echo '*/15 * * * * root  /root/cron.sh' >> /etc/periodic/15min/cron
+#RUN crond -f -l 8
 
 EXPOSE 22
 

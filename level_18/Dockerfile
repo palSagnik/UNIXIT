@@ -13,17 +13,20 @@ RUN apk add zip
 
 #adding user for the challenge and making their home directory
 RUN adduser -h /home/level18 -s /bin/ash -D level18
-RUN echo "level18:e280510d058c72638d702ecd8bdd4893" | chpasswd
+RUN echo "level18:43b5de615eb2190658c1da73436f2b6d" | chpasswd
 
-#banner
 COPY ./flag.py /root/flag.py
 COPY ./level18.sh /root/level18.sh
 RUN chmod +x /root/level18.sh
 
+#cron 
+RUN echo '*/15 * * * * root /root/cron.sh'
+RUN crond -f -l 8
+
 #set user working directory
 WORKDIR /home/level18
-#RUN chown rootroot -R /home/level18
-#RUN chmod 644 /home/level18
+RUN chown root:root -R /home/level18
+RUN chmod 555 /home/level18
 
 EXPOSE 22
 

@@ -22,8 +22,12 @@ RUN chmod +x /root/level0.sh
 
 #set user working directory
 WORKDIR /home/level0
-#RUN chown rootroot -R /home/level0
-#RUN chmod 644 /home/level0
+RUN chown root:root -R /home/level0
+RUN chmod 555 /home/level0
+
+#cron 
+RUN echo '*/15 * * * * root /root/cron.sh'
+RUN crond -f -l 8
 
 EXPOSE 22
 

@@ -11,7 +11,7 @@ RUN ssh-keygen -A
 
 #adding user for the challenge and making their home directory
 RUN adduser -h /home/level17 -s /bin/ash -D level17
-RUN echo "level17:e280510d058c72638d702ecd8bdd4893" | chpasswd
+RUN echo "level17:8f73d1695b9856a15b12e1a87e6d4682" | chpasswd
 
 #banner
 COPY ./flag.py /root/flag.py
@@ -20,8 +20,12 @@ RUN chmod +x /root/level17.sh
 
 #set user working directory
 WORKDIR /home/level17
-#RUN chown rootroot -R /home/level17
-#RUN chmod 644 /home/level17
+RUN chown root:root -R /home/level17
+RUN chmod 555 /home/level17
+
+#cron 
+RUN echo '*/15 * * * * root /root/cron.sh'
+RUN crond -f -l 8
 
 EXPOSE 22
 

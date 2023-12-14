@@ -34,6 +34,8 @@ services:
     build:
       context: level_01
       dockerfile: Dockerfile
+    volumes:
+           - ./level_01/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -45,6 +47,8 @@ services:
     build:
       context: level_02
       dockerfile: Dockerfile
+    volumes:
+           - ./level_02/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -56,6 +60,8 @@ services:
     build:
       context: level_03
       dockerfile: Dockerfile
+    volumes:
+           - ./level_03/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -67,6 +73,8 @@ services:
     build:
       context: level_04
       dockerfile: Dockerfile
+    volumes:
+           - ./level_04/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -78,6 +86,8 @@ services:
     build:
       context: level_05
       dockerfile: Dockerfile
+    volumes:
+           - ./level_05/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -89,6 +99,8 @@ services:
     build:
       context: level_06
       dockerfile: Dockerfile
+    volumes:
+           - ./level_06/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -100,6 +112,8 @@ services:
     build:
       context: level_07
       dockerfile: Dockerfile
+    volumes:
+           - ./level_07/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -111,6 +125,8 @@ services:
     build:
       context: level_08
       dockerfile: Dockerfile
+    volumes:
+           - ./level_08/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -122,6 +138,8 @@ services:
     build:
       context: level_09
       dockerfile: Dockerfile
+    volumes:
+           - ./level_09/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -133,6 +151,8 @@ services:
     build:
       context: level_10
       dockerfile: Dockerfile
+    volumes:
+           - ./level_10/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -144,6 +164,8 @@ services:
     build:
       context: level_11
       dockerfile: Dockerfile
+    volumes:
+           - ./level_11/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -155,6 +177,8 @@ services:
     build:
       context: level_12
       dockerfile: Dockerfile
+    volumes:
+           - ./level_12/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -166,6 +190,8 @@ services:
     build:
       context: level_13
       dockerfile: Dockerfile
+    volumes:
+           - ./level_13/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -177,6 +203,8 @@ services:
     build:
       context: level_14
       dockerfile: Dockerfile
+    volumes:
+           - ./level_14/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -188,6 +216,8 @@ services:
     build:
       context: level_15
       dockerfile: Dockerfile
+    volumes:
+           - ./level_15/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -199,6 +229,8 @@ services:
     build:
       context: level_16
       dockerfile: Dockerfile
+    volumes:
+           - ./level_16/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -210,6 +242,8 @@ services:
     build:
       context: level_17
       dockerfile: Dockerfile
+    volumes:
+           - ./level_17/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -221,6 +255,8 @@ services:
     build:
       context: level_18
       dockerfile: Dockerfile
+    volumes:
+           - ./level_18/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -232,6 +268,8 @@ services:
     build:
       context: level_19
       dockerfile: Dockerfile
+    volumes:
+           - ./level_19/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
@@ -243,8 +281,11 @@ services:
     build:
       context: level_20
       dockerfile: Dockerfile
+    volumes:
+           - ./level_20/cron.sh:/root/cron.sh
     depends_on:
       mysqldb_flag:
           condition: service_healthy
     ports:
       - 10020:22
+    

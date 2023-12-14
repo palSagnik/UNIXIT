@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 cd /var/spool/level20
 echo "Executing and deleting all scripts in /var/spool/level20:"

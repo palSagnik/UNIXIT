@@ -1,9 +1,0 @@
-1. Write the cronjobs for the all the levels required 0 to 20
-2. update the passwords of all the levels 2 to 20
-3. Finish making all the containers 6 to 20
-4. resolve the permission errors
-5. In logs setting of flags not permitted errors why?
-6. Memory optimisation
-
------> level8 process.py
------> level13 ssh public key generation

@@ -8,7 +8,7 @@ if [ -d "$dir" ]; then
 fi
 mkdir /home/level12
 cd /home/level12
-for (( c=1; c<=100; c++ ))
+for i in {1..100}
 do  
    mkdir maybe_this_is_flag
    cd maybe_this_is_flag

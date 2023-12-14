@@ -9,3 +9,5 @@ mv iamgroot /opt/.
 touch flag.txt
 chown root:root flag.txt
 chmod 700 flag.txt
+
+/usr/sbin/sshd -D

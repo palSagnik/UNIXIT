@@ -5,7 +5,7 @@ import mysql.connector
 
 infra = "unixit"
 
-LEVEL = 18
+LEVEL = 20
 def gen_flag():
     flag = ''
     seed=round(time.time())

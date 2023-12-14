@@ -22,7 +22,7 @@ services:
       context: level_00
       dockerfile: Dockerfile
     volumes:
-           - 
+           - ./level_00/cron.sh:/root/cron.sh 
     depends_on:
       mysqldb_flag:
         condition: service_healthy

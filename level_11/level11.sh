@@ -26,4 +26,4 @@ rm -r ./step1
 echo '''This challenge will make you familier with multiple types of archives Just find ways to extract them and move step by step''' > README
 chmod 750 -R /home/level11
 chown -R root:level11 /home/level11/
-/usr/bin/sshd -D
+/usr/sbin/sshd -D

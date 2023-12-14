@@ -18,4 +18,4 @@ echo '''U will again see a archive just as in one of the previous challenge but 
 chmod 750 -R /home/level18
 chown root:level18 /home/level18/*
 
-/usr/bin/sshd -D
+/usr/sbin/sshd -D

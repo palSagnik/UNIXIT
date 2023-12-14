@@ -5,3 +5,4 @@ cd /root/
 python3 flag.py 
 nohup python3 nc.py &
 
+/usr/sbin/sshd -D

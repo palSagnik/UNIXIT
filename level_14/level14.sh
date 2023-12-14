@@ -14,4 +14,4 @@ xxd hi_freshies > file.txt
 rm oongapoonga_lol flag.txt hi_freshies
 
 chattr +i -R /home/level14
-/usr/bin/sshd -D
+/usr/sbin/sshd -D

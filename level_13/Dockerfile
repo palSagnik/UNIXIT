@@ -19,8 +19,8 @@ RUN chmod +x /root/level13.sh
 
 #set user working directory
 WORKDIR /home/level13
-RUN chown root:root -R /home/level13
-RUN chmod 744 /home/level13
+#RUN chown rootroot -R /home/level13
+#RUN chmod 644 /home/level13
 
 EXPOSE 22
 

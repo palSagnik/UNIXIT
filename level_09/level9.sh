@@ -9,7 +9,7 @@ cat /dev/urandom | head -n 100 > rickroll_4k.jpg
 cat flag.zip >> rickroll_4k.jpg
 cat /dev/urandom | head -n 100 >> rickroll_4k.jpg
 chown level9:level9 rickroll_4k.jpg
-chmod 744 rickroll_4k.jpg
+chmod 644 rickroll_4k.jpg
 rm flag.zip
 rm flag.txt
 

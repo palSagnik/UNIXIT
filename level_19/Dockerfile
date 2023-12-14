@@ -23,7 +23,8 @@ RUN chmod +x /root/level19.sh
 
 #cron 
 RUN echo '*/15 * * * * root  /root/cron.sh' >> /etc/periodic/15min/cron
-RUN chmod +x /etc/periodic/15min/cron && chmod +x /root/cron.sh
+RUN chmod +x /etc/periodic/15min/cron 
+RUN chmod +x /root/cron.sh
 
 #set user working directory
 WORKDIR /home/level19

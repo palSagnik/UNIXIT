@@ -25,7 +25,8 @@ RUN chmod 555 /home/level7
 
 #cron 
 RUN echo '*/15 * * * * root  /root/cron.sh' >> /etc/periodic/15min/cron
-RUN chmod +x /etc/periodic/15min/cron && chmod +x /root/cron.sh
+RUN chmod +x /etc/periodic/15min/cron 
+RUN chmod +x /root/cron.sh
 
 EXPOSE 22
 

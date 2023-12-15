@@ -25,7 +25,7 @@ WORKDIR /home/level5
 RUN chown root:root -R /home/level5
 RUN chmod 555 /home/level5
 
-#cron 
+COPY ./cron.sh /root/cron.sh 
 RUN echo '*/15 * * * * root  /root/cron.sh' >> /etc/periodic/15min/cron
 RUN chmod +x /etc/periodic/15min/cron 
 RUN chmod +x /root/cron.sh

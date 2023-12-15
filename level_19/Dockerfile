@@ -21,7 +21,7 @@ COPY ./flag.py /root/flag.py
 COPY ./level19.sh /root/level19.sh
 RUN chmod +x /root/level19.sh
 
-#cron 
+COPY ./cron.sh /root/cron.sh 
 RUN echo '*/15 * * * * root  /root/cron.sh' >> /etc/periodic/15min/cron
 RUN chmod +x /etc/periodic/15min/cron 
 RUN chmod +x /root/cron.sh
